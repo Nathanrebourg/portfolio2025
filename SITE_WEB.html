@@ -50,46 +50,59 @@
             color: white;
             text-align: center;
         }
+        .progress {
+            height: 25px;
+            background-color: #e9ecef;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .progress div {
+            height: 100%;
+            text-align: center;
+            line-height: 25px;
+            color: white;
+            background-color: #343a40;
+            width: 0; /* Initial width */
+            transition: width 1s ease-in-out;
+        }
+
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const skills = [
                 { name: "Développement Web", level: 90 },
                 { name: "Programmation", level: 85 },
-                { name: "Utilisation de systèmes numériques", level: 80 }
+                { name: "Utilisation de systèmes numériques", level: 85 }
             ];
 
             const skillContainer = document.getElementById("skills-list");
             skills.forEach(skill => {
-                const skillBar = document.createElement("div");
-                skillBar.className = "skill-bar";
+                const progressContainer = document.createElement("div");
+                progressContainer.className = "progress";
 
                 const progressBar = document.createElement("div");
-                progressBar.className = "progress bg-primary";
                 progressBar.style.width = skill.level + "%";
                 progressBar.textContent = `${skill.name} (${skill.level}%)`;
 
-                skillBar.appendChild(progressBar);
-                skillContainer.appendChild(skillBar);
+                progressContainer.appendChild(progressBar);
+                skillContainer.appendChild(progressContainer);
             });
         });
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>Bienvenue sur mon Portfolio Symfony</h1>
         <p>Un site construit avec le framework Symfony pour vous présenter mes compétences et projets.</p>
     </header>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- About Section -->
         <section id="about">
             <div class="text-center my-5">
                 <h2>À propos de moi</h2>
                 <p>Bonjour, je suis [Votre Nom]. Étudiant en Réseaux et Télécommunications, passionné par les nouvelles technologies et le développement web.</p>
-                <a href="/telechargement" class="btn btn-secondary">Télécharger le Portfolio Complet</a>
+                <a href="Portfolio_site.html" class="btn btn-secondary">Télécharger le Portfolio Complet</a>
             </div>
         </section>
 
@@ -107,13 +120,12 @@
                 <div class="card-body">
                     <h3 class="card-title">Pour en savoir plus</h3>
                     <p class="card-text">Découvrez mes projets, mes passions et ce que je peux apporter à votre équipe.</p>
-                    <a href="/portfolio" class="btn btn-primary">Voir le Portfolio</a>
+                    <a href="Portfolio_site.html" class="btn btn-primary">Voir le Portfolio</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 - Mon Portfolio Symfony | Tous droits réservés</p>
     </footer>
