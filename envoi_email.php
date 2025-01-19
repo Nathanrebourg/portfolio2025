@@ -9,7 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $subject = "Votre portfolio";
         $message = "Bonjour,\n\nMerci de votre intérêt ! Vous pouvez consulter mon portfolio en cliquant sur le lien ci-dessous :\n\n$portfolioLink\n\nCordialement,\n[Votre nom]";
-        $headers = "From: votre-email@example.com";
+        $headers = "From: votre-email@example.com\r\n";
+        $headers .= "Reply-To: votre-email@example.com\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         // Envoi email
         if (mail($email, $subject, $message, $headers)) {
