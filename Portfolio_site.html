@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        form .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recevez le Portfolio Complet</h1>
+        <p>Entrez votre adresse e-mail pour recevoir mon portfolio complet.</p>
+        <form action="/send-portfolio" method="POST">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required placeholder="Votre e-mail" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>
