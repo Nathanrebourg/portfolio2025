@@ -34,6 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->setFrom('your-email@example.com', 'Your Name');
             $mail->addAddress($email);
 
+            // Attachments
+            $mail->addAttachment('cv.pdf'); // Add PDF attachment
+            $mail->addAttachment('cv.docx'); // Add DOCX attachment
+
             // Content
             $mail->isHTML(false);
             $mail->Subject = $subject;
