@@ -1,0 +1,29 @@
+<!-- filepath: templates/cv.html.twig -->
+{% extends 'base.html.twig' %}
+
+{% block title %}My CV{% endblock %}
+
+{% block header %}Network and Telecommunications Engineer{% endblock %}
+
+{% block body %}
+<section id="education" class="my-5">
+    <h2>Education</h2>
+    <p>Details about your education.</p>
+</section>
+
+<section id="experience" class="my-5">
+    <h2>Professional Experience</h2>
+    <p>Details about your professional experience.</p>
+</section>
+
+<section id="skills" class="my-5">
+    <h2>Skills</h2>
+    <p>Details about your skills.</p>
+</section>
+
+<section id="download-cv" class="my-5">
+    <h2>Download CV</h2>
+    <a href="CV.pdf" class="btn btn-primary" download>Download PDF</a>
+    <a href="CV.docx" class="btn btn-secondary" download>Download DOCX</a>
+</section>
+{% endblock %}
