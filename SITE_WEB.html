@@ -1,133 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Symfony</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .container {
-            margin-top: 20px;
-        }
-        .card {
-            margin: 20px 0;
-        }
-        .skills {
-            margin-top: 40px;
-        }
-        .skill-bar {
-            position: relative;
-            display: block;
-            width: 100%;
-            background: #e9ecef;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-        .skill-bar .progress {
-            display: block;
-            height: 25px;
-            border-radius: 20px;
-            line-height: 25px;
-            color: white;
-            text-align: center;
-        }
-        .progress {
-            height: 25px;
-            background-color: #e9ecef;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-        .progress div {
-            height: 100%;
-            text-align: center;
-            line-height: 25px;
-            color: white;
-            background-color: #343a40;
-            width: 0; /* Initial width */
-            transition: width 1s ease-in-out;
-        }
-
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const skills = [
-                { name: "Développement Web", level: 90 },
-                { name: "Programmation", level: 85 },
-                { name: "Utilisation de systèmes numériques", level: 85 }
-            ];
-
-            const skillContainer = document.getElementById("skills-list");
-            skills.forEach(skill => {
-                const progressContainer = document.createElement("div");
-                progressContainer.className = "progress";
-
-                const progressBar = document.createElement("div");
-                progressBar.style.width = skill.level + "%";
-                progressBar.textContent = `${skill.name} (${skill.level}%)`;
-
-                progressContainer.appendChild(progressBar);
-                skillContainer.appendChild(progressContainer);
-            });
-        });
-    </script>
+    <title>Home - My Symfony Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur mon Portfolio Symfony</h1>
-        <p>Un site construit avec le framework Symfony pour vous présenter mes compétences et projets.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="text-center my-5">
+        <h1>John Doe</h1>
+        <p>Group TP: 12345</p>
+        <p>Welcome to my personal portfolio website!</p>
     </header>
 
     <div class="container">
-        <section id="about">
-            <div class="text-center my-5">
-                <h2>À propos de moi</h2>
-                <p>Bonjour, je suis [Votre Nom]. Étudiant en Réseaux et Télécommunications, passionné par les nouvelles technologies et le développement web.</p>
-                <a href="Portfolio_site.html" class="btn btn-secondary">Télécharger le Portfolio Complet</a>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="text-center my-5">
-                <h2>Mes Compétences</h2>
-                <div id="skills-list"></div>
-            </div>
-        </section>
-
-        <!-- Container Section -->
-        <section id="more-info">
+        <section id="more-info" class="my-5">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-title">Pour en savoir plus</h3>
-                    <p class="card-text">Découvrez mes projets, mes passions et ce que je peux apporter à votre équipe.</p>
-                    <a href="Portfolio_site.html" class="btn btn-primary">Voir le Portfolio</a>
+                    <h3 class="card-title">Learn More</h3>
+                    <p class="card-text">Discover my projects, my passions, and what I can bring to your team.</p>
+                    <a href="hobbies.html" class="btn btn-primary">View My Hobbies</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 - Mon Portfolio Symfony | Tous droits réservés</p>
+    <footer class="text-center">
+        <p>&copy; 2025 - My Symfony Portfolio | All rights reserved</p>
     </footer>
 </body>
 </html>
