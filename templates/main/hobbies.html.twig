@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hobbies - My Portfolio{% endblock %}
+
+{% block header %}My Hobbies{% endblock %}
+
+{% block body %}
+<section id="hobbies" class="my-5">
+    <div class="row">
+        <div class="col">
+            <h2>My Hobbies</h2>
+            <div class="card">
+                <img src="images/photography.jpg" class="card-img-top" alt="Photography">
+                <div class="card-body">
+                    <h3 class="card-title">Photography</h3>
+                    <p class="card-text">Capturing moments through the lens of my camera is a hobby I deeply cherish.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/traveling.jpg" class="card-img-top" alt="Traveling">
+                <div class="card-body">
+                    <h3 class="card-title">Traveling</h3>
+                    <p class="card-text">Exploring new places and experiencing different cultures is something I am very passionate about.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/reading.jpg" class="card-img-top" alt="Reading">
+                <div class="card-body">
+                    <h3 class="card-title">Reading</h3>
+                    <p class="card-text">I love reading books on various topics, including technology, science fiction, and personal development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

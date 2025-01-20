@@ -1,20 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}Home - My Symfony Portfolio{% endblock %}
+
+{% block header %}REBOURG Nathan le pédado et consanguin{% endblock %}
+{% block subheader %}IUT of ROANNE{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/natha/potrfolio/src/Controller/MainController.php</code></li>
-        <li>Your template at <code>C:/Users/natha/potrfolio/templates/main/index.html.twig</code></li>
-    </ul>
-</div>
+<section id="more-info" class="my-5">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Learn More</h3>
+            <p class="card-text">Discover my projects, my passions, and what I can bring to your team.</p>
+            <a href="{{ path('hobbies') }}" class="btn btn-primary">View My Hobbies</a>
+        </div>
+    </div>
+</section>
 {% endblock %}
