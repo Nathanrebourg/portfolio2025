@@ -2,27 +2,28 @@
 
 {% block title %}My CV{% endblock %}
 
-{% block header %}Network and Telecommunications Engineer{% endblock %}
+{% block header %}Network and Telecommunications Student{% endblock %}
 
 {% block body %}
 <section id="education" class="my-5">
     <h2>Education</h2>
-    <p>Details about your education.</p>
+    <p>high scool : Lycée Louis-Armand speciality 2023-2024 : Systèmes d'Infomation Numériques.</p>
+    <p>studies : IUT ROANNE 2024-2025<p>
 </section>
 
 <section id="experience" class="my-5">
     <h2>Professional Experience</h2>
-    <p>Details about your professional experience.</p>
+    <p>I did the harvest (2021-2023)two years in a row and the following year I worked in a garage preparing vehicles for 1 month and a half (2024) which shows that I am determined to succeed!</p>
 </section>
 
 <section id="skills" class="my-5">
     <h2>Skills</h2>
-    <p>Details about your skills.</p>
+    <p>I have skills, for example, to be able to lead people thanks for example to my role as vice-president of the BDE of the RT. I also know how to use social networks to bring more visibility to brands. In the more computer science part, I know how to code in python and html/css. </p>
 </section>
 
 <section id="download-cv" class="my-5">
     <h2>Download CV</h2>
-    <a href="CV.pdf" class="btn btn-primary" download>Download PDF</a>
-    <a href="CV.docx" class="btn btn-secondary" download>Download DOCX</a>
+    <a href="{{ asset('CV.pdf') }}" class="btn btn-primary" download>Download PDF</a>
+    <a href="{{ asset('CV.docx') }}" class="btn btn-secondary" download>Download DOCX</a>
 </section>
 {% endblock %}
